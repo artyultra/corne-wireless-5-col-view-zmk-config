@@ -93,7 +93,7 @@
 
         back_tick {
             bindings = <&kp GRAVE>;
-            key-positions = <11 12>;
+            key-positions = <11 10>;
             layers = <0 4 1 2 3 5 6 7>;
         };
     };
