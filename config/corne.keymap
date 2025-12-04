@@ -148,7 +148,7 @@
         switch_linux: switch_linux {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1 &to 0>;
+            bindings = <&bt BT_SEL 1 &to 4>;
             label = "SWITCH_LINUX";
         };
 
@@ -158,19 +158,12 @@
             bindings = <&bt BT_SEL 0 &to 0>;
             label = "SWITCH_MAC";
         };
-
-        switch_gaming: switch_gaming {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 0 &to 0>;
-            label = "SWITCH_GAMING";
-        };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        Base {
+        mac_base {
             display-name = "mac";
             bindings = <
   &kp Q                &kp W              &kp E            &kp R                            &kp T    &kp Y  &kp U        &kp I             &kp O         &kp P
@@ -180,7 +173,7 @@
             >;
         };
 
-        layer_1 {
+        mac_lay1 {
             bindings = <
   &kp KP_EQUAL     &kp N7  &kp N8  &kp N9  &kp LEFT_BRACE          &kp RIGHT_BRACE        &trans  &trans  &trans  &trans
   &kp DOLLAR       &kp N4  &kp N5  &kp N6  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &trans  &trans  &trans  &trans
@@ -191,7 +184,7 @@
             label = "LTenKey_1";
         };
 
-        layer_2 {
+        mac_lay2 {
             label = "RArrows_2";
             bindings = <
   &trans  &bt BT_SEL 0  &bt BT_SEL 1  &trans  &trans    &kp PAGE_UP    &kp C_PLAY       &kp C_NEXT         &kp END    &trans
@@ -201,18 +194,18 @@
             >;
         };
 
-        layer_3 {
+        mac_lay3 {
             bindings = <
-  &trans  &kp F7  &kp F8  &kp F9  &kp F10    &venv          &venv_sys       &trans        &trans        &trans
-  &trans  &kp F4  &kp F5  &kp F6  &kp F11    &bt BT_CLR     &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 4
-  &trans  &kp F1  &kp F2  &kp F3  &kp F12    &switch_linux  &switch_gaming  &trans        &trans        &trans
-                  &trans  &trans  &trans     &trans         &trans          &trans
+  &trans  &kp F7  &kp F8  &kp F9  &kp F10    &venv          &venv_sys     &trans        &trans        &trans
+  &trans  &kp F4  &kp F5  &kp F6  &kp F11    &bt BT_CLR     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 4
+  &trans  &kp F1  &kp F2  &kp F3  &kp F12    &switch_linux  &trans        &trans        &trans        &trans
+                  &trans  &trans  &trans     &trans         &trans        &trans
             >;
 
             label = "Function_3";
         };
 
-        layer_4 {
+        arch_base {
             display-name = "arch";
             bindings = <
   &kp Q                &kp W              &kp E             &kp R                            &kp T    &kp Y  &kp U             &kp I             &kp O         &kp P
@@ -222,7 +215,7 @@
             >;
         };
 
-        layer_5 {
+        arch_lay1 {
             label = "arch_LTenKey_1";
             bindings = <
   &kp KP_NUMBER_0  &kp N7  &kp N8  &kp N9  &kp LEFT_BRACE          &kp RIGHT_BRACE        &trans  &trans  &trans  &trans
@@ -232,7 +225,7 @@
             >;
         };
 
-        layer_6 {
+        arch_lay2 {
             label = "arch_RArrows_2";
             bindings = <
   &trans  &bt BT_SEL 0  &bt BT_SEL 1  &trans  &trans    &kp PAGE_UP    &kp C_PLAY       &kp C_NEXT         &kp END    &trans
@@ -242,7 +235,7 @@
             >;
         };
 
-        layer_7 {
+        arch_lay3 {
             label = "arch_Function_3";
             bindings = <
   &trans  &kp F7  &kp F8  &kp F9  &kp F10    &venv        &venv_sys     &trans        &trans        &trans
