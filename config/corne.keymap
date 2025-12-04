@@ -171,7 +171,7 @@
         compatible = "zmk,keymap";
 
         Base {
-            display-name = "Base";
+            display-name = "mac";
             bindings = <
   &kp Q                &kp W              &kp E            &kp R                            &kp T    &kp Y  &kp U        &kp I             &kp O         &kp P
   &hml LEFT_CONTROL A  &hmr LEFT_SHIFT S  &hml LEFT_ALT D  &hml LGUI F                      &kp G    &kp H  &hmr RGUI J  &hml RIGHT_ALT K  &hmr RSHFT L  &hmr RIGHT_CONTROL SQT
@@ -213,7 +213,7 @@
         };
 
         layer_4 {
-            display-name = "arch_base";
+            display-name = "arch";
             bindings = <
   &kp Q                &kp W              &kp E             &kp R                            &kp T    &kp Y  &kp U             &kp I             &kp O         &kp P
   &hml LEFT_CONTROL A  &hmr LEFT_SHIFT S  &hml RIGHT_GUI D  &hml LALT F                      &kp G    &kp H  &hmr RIGHT_ALT J  &hml RIGHT_GUI K  &hmr RSHFT L  &hmr RIGHT_CONTROL SQT
